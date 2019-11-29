@@ -1,17 +1,21 @@
-list = [2 ,7 ,9 ,8 ,88 ,90 , 91]
-even_numbers = []
+some_list = [2 ,7 ,9 ,8 ,88 ,90 , 91,]
+one_list = []
 
-def even_number_of_evens(numbers):
-    if len(list) % 2 == 0:
-        numbers == False
+def even_number_of_evens(my_list, even_numbers):
+    for number in my_list:
+        if number % 2 == 0:
+            even_numbers.append(number)
     
-    for numbers in list:
-        if numbers % 2 == 0:
-            even_numbers.append(numbers)
-    print(even_numbers)
-    return even_numbers
+    
+    length = len(even_numbers)
+    if not length % 2 == 0:
+        print("this is not an even number of evens")
+    else:
+        print(even_numbers)
+        return even_numbers
+        
 
-even_number_of_evens(list)
+even_number_of_evens(some_list, one_list)
        
 
 # assert even_number_of_evens([]) == False, "No numbers"   
